@@ -28,8 +28,8 @@ public class Selenium {
   @Before
   public void setUp() throws Exception {
 	  
-	  File f=new File("D:" + File.separator + "MyDownloads"+ File.separator + "软件测试名单.xls");
-	  //D:\MyDownloads
+	  File f=new File("D:" + File.separator + "eclipse-workspace"+ File.separator + "lab2" + File.separator + "软件测试名单.xls");
+	  //D:\eclipse-workspace\lab2
 	  try {
 			Workbook book=Workbook.getWorkbook(f);//
 			Sheet sheet=book.getSheet(0);   //获得第一个工作表对象
@@ -78,11 +78,6 @@ public class Selenium {
 	    assertEquals(studentGit[i], driver.findElement(By.id("student-git")).getText());
 	    driver.findElement(By.id("btn_logout")).click();
 	    driver.findElement(By.id("btn_return")).click();
-	    
-		/*System.out.print(studentId[i]+" ");
-	    System.out.print(studentPassword[i]+" ");
-	    System.out.print(studentGit[i]+" ");
-	    System.out.print("\n");*/
 	}
 	  
     //WebElement we = driver.findElement(By.id("kw"));
@@ -92,14 +87,6 @@ public class Selenium {
     //driver.findElement(By.id("kw")).sendKeys("天津大学");
     //driver.findElement(By.id("su")).click();
     //assertEquals("天津大学_百度搜索", driver.getTitle());
-	
-	/*driver.get(baseUrl + "/");
-    driver.findElement(By.name("id")).sendKeys("3016218080");
-    driver.findElement(By.name("password")).sendKeys("218080");
-    driver.findElement(By.id("btn_login")).click();
-    assertEquals("https://github.com/cyytju", driver.findElement(By.id("student-git")).getText());
-    driver.findElement(By.id("btn_logout")).click();*/
-    
   }
 
   @After
